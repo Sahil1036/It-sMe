@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sahil - portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      :root {
+        --color-purple: hsl(257, 40%, 49%);
+        --color-pink: hsl(300, 69%, 71%);
+        --color-black: hsl(0, 0%, 0%);
+        --color-white: hsl(0, 0%, 100%);
+        --normal-size: 20px;
+        --medium-size: 30px;
+        --large-size: 80px;
+      }
+
+      /* UNiversal style */
+      * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-image: url(bg-desktop.svg);
+        background-color: var(--color-purple);
+        color: var(--color-pink);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      /* Header style */
+      .header {
+        width: max(80%, 250px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        color: var(--color-black);
+      }
+
+      .headerTitle {
+        font-size: var(--large-size);
+      }
+
+      .navbar ul {
+        display: flex;
+        font-size: var(--medium-size);
+      }
+      
+      .navbar ul li{
+        margin: 0 10px;
+        transition: all 0.5s ease;
+      }
+      
+      .navbar ul li a{
+        color: var(--color-black);
+      }
+      
+      .navbar ul li:hover{
+        text-decoration:overline;
+        transform: translateY(-10px);
+      }
+
+      .headerBtn {
+      }
+
+      button {
+        padding: 17px 40px;
+        border-radius: 50px;
+        cursor: pointer;
+        border: 0;
+        color: var(--color-white);
+        background-color: var(--color-black);
+        box-shadow: var(--color-white) 0 0 8px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-size: var(--normal-size);
+        transition: all 0.5s ease;
+      }
+
+      button:hover {
+        letter-spacing: 3px;
+        color: var(--color-black);
+        background-color: var(--color-white);
+        box-shadow: var(--color-black) 0px 7px 29px 0px;
+      }
+      
+      button:active {
+        letter-spacing: 3px;
+        color: var(--color-black);
+        background-color: var(--color-white);
+        box-shadow: var(--color-black) 0px 0px 0px 0px;
+        transform: translateX(10px);
+        transition: 100ms;
+      }
+      
+      .section{
+        width: max(90%, 250px);
+        color: var(--color-black);
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      
+      .leftSection{
+        width: max(50%,300px);
+      }
+      
+      .leftSection h2{
+        font-size: var(--large-size);
+      }
+      
+      .leftSection p{
+        margin: 20px 0;
+        font-size: var(--normal-size);
+      }
+
+      .sectionBtn:active{
+        transform: translateY(10px);
+      }
+      
+      img{
+        width:500px;
+        height: 600px;
+        object-fit: cover;
+        transition: all 0.5s ease;
+      }
+
+      #bg-me{
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        z-index: -1;
+        transform: translate(80px,150px);
+      }
+
+      .rightSection:hover #bg-me{
+        transform: translate(100px,120px);
+      }
+
+      .rightSection:hover #me{
+        transform: translate(-80px,80px);
+      }
+
+      @media screen and (max-width: 1024px) {
+        body {
+          background-image: url(bg-mobile.svg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="headerTitle">Portfolio</div>
+        <nav class="navbar">
+          <ul>
+            <li class="navbarItem"><a href="">Home</a></li>
+            <li class="navbarItem"><a href="">About</a></li>
+            <li class="navbarItem"><a href="">Project</a></li>
+            <li class="navbarItem"><a href="">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <button class="headerBtn">Hire me  <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </header>
+    <section id="mainPage">
+      <div class="section">
+        <div class="leftSection">
+          <h2>Hey! I,m Sahil</h2>
+          <p>I,m a final year BCA student with a passion for harnessing the power of technology to solve real-world problems. My academic journey has equipped me with a strong foundation in computer science, and I am eager to leverage my skills in the dynamic fields of web development and Data Structures & Algorithms (DSA).</p>
+         <button class="sectionBtn">Download CV</button>
+        </div>
+        <div class="rightSection">
+          <img id="bg-me" src="bg-me.png" alt="">
+          <img id="me" src="me.png" alt="">
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
