@@ -473,13 +473,16 @@ footer {
     #contact {
         justify-content: center;
     }
+
+    :root{
+        --color-purple: hsl(256, 36%, 55%);
+        --color-pink: hsl(300, 76%, 77%);
+    }
 }
 
 /*mini mobile view */
 @media screen and (max-width: 320px) {
     :root {
         --large-size: 40px;
-        --color-purple: hsl(256, 36%, 55%);
-        --color-pink: hsl(300, 76%, 77%);
     }
 }
