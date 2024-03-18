@@ -469,11 +469,17 @@ footer {
     button {
         font-size: 15px;
     }
+
+    #contact {
+        justify-content: center;
+    }
 }
 
 /*mini mobile view */
 @media screen and (max-width: 320px) {
     :root {
         --large-size: 40px;
+        --color-purple: hsl(256, 36%, 55%);
+        --color-pink: hsl(300, 76%, 77%);
     }
 }
