@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --color-purple: hsl(257, 40%, 49%);
     --color-pink: hsl(300, 69%, 71%);
     --color-black: hsl(0, 0%, 0%);
     --color-white: hsl(0, 0%, 100%);
     --normal-size: 20px;
-    --medium-size: 30px;
-    --large-size: 80px;
+    --medium-size: 28px;
+    --large-size: 70px;
 }
 
 /* UNiversal style */
@@ -15,6 +17,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    font-family: Poppins, sans-serif;
 }
 
 body {
@@ -78,7 +81,7 @@ header {
     z-index: 3;
     bottom: 100px;
     right: -240px;
-    width: 400px;
+    width: 420px;
     height: 200px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.3);
@@ -97,11 +100,10 @@ header {
 
 .mobileNavbar ul li a {
     color: var(--color-black);
-    /* color: var(--color-pink); */
 }
 
 .mobileNavbar ul li:hover {
-    font-size: 1.4em;
+    font-size: 1.2em;
     text-decoration: underline;
     transform: translatex(20px);
 }
@@ -151,6 +153,7 @@ button:active {
     transition: 100ms;
 }
 
+/* section style */
 .section {
     width: max(90%, 250px);
     color: var(--color-black);
@@ -258,6 +261,7 @@ img {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 30px 10px;
 }
 
 .sectionPart h2 {
@@ -285,14 +289,13 @@ img {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
     box-shadow: var(--color-white) 0 0 8px;
     padding: 20px;
 }
 
-.skillCard:hover,
-.projectCard:hover {
-    animation: rotate 3s 1s infinite alternate ease-in-out;
+.skillCard:hover {
+    animation: rotate 3s .6s infinite alternate ease-in-out;
 }
 
 @keyframes rotate {
@@ -317,8 +320,8 @@ img {
 .skillCard img {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain;
+    /* border-radius: 20px; */
 }
 
 /* project Section */
@@ -343,14 +346,14 @@ img {
     font-size: var(--normal-size);
 }
 
-.projectCard button:active {
+#project button:active {
     transform: translateY(10px);
 }
 
 .overlay {
-    width: min(260px, 75%);
+    width: min(260px, 80%);
     height: 180px;
-    background-color: rgba(0, 0, 0, .4);
+    overflow: auto;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -360,35 +363,57 @@ img {
 }
 
 .overlay i {
-    visibility: hidden;
+    color: var(--color-black);
+    font-size: 1.8em;
+    transform: scale(0);
     transition: all .5s ease-in;
 }
 
 .overlay:hover i {
-    visibility: visible;
-    font-size: 1.8em;
+    transform: scale(1);
 }
 
 /* contact setion */
 #contact {
-    /* background-color: rgba(255, 255, 255, 0.3); */
     box-shadow: var(--color-white) 0 0 8px;
-    padding: 20px 0px;
+    padding: 20px 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: var(--large-size);
 }
 
+.contactLeft {
+    width: max(50%, 250px);
+}
+
+.contactLeft p {
+    font-size: .8em;
+}
+
+.sayHii {
+    color: var(--color-pink);
+}
+
+.sayHii:hover {
+    color: var(--color-white);
+}
+
+#icons {
+    display: flex;
+    flex-direction: column;
+}
 
 /* footer */
 footer {
     width: 100%;
-    position: sticky;
-    bottom: 0;
     font-size: var(--medium-size);
     text-align: center;
     margin-bottom: 120px;
     z-index: 3;
     color: var(--color-white);
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: var(--color-white) 0 0 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* box-shadow: var(--color-white) 0 0 8px; */
     padding: 10px;
 }
 
@@ -438,10 +463,17 @@ footer {
     }
 
     :root {
-        --large-size: 60px;
+        --large-size: 50px;
     }
 
     button {
         font-size: 15px;
+    }
+}
+
+/*mini mobile view */
+@media screen and (max-width: 320px) {
+    :root {
+        --large-size: 40px;
     }
 }

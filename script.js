@@ -1,3 +1,4 @@
+// Navbar code
 let navbar = document.querySelector("header");
 window.onscroll = function () {
   let pos = window.pageYOffset;
@@ -13,6 +14,7 @@ window.onscroll = function () {
   }
 };
 
+// Menu code
 let menu = document.querySelector(".menu");
 let menuLine = document.querySelectorAll(".menuLine");
 let mobileNavbar = document.querySelector(".mobileNavbar");
@@ -30,3 +32,107 @@ function showMenu() {
     });
   }
 }
+
+// skill append
+let skill = [
+  {
+    name: "c",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/695px-C_Programming_Language.svg.png",
+  },
+  {
+    name: "C++",
+    image:
+      "https://static.vecteezy.com/system/resources/previews/012/697/300/original/3d-c-programming-language-logo-free-png.png",
+  },
+  {
+    name: "HTML",
+    image: "https://sk-mousin-ali.github.io/Portfolio/img/logo/html.svg",
+  },
+  {
+    name: "CSS",
+    image: "https://sk-mousin-ali.github.io/Portfolio/img/logo/css.svg",
+  },
+  {
+    name: "Javascript",
+    image: "https://sk-mousin-ali.github.io/Portfolio/img/logo/javascript.svg",
+  },
+  {
+    name: "Tailwindcss",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png",
+  },
+  {
+    name: "Bootstrap",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
+  },
+  {
+    name: "Git",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png",
+  },
+  {
+    name: "Github",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg",
+  },
+];
+let skillBox = document.querySelector(".skillBox");
+skill.forEach((e) => {
+  let skillCard = document.createElement("div");
+  skillCard.innerHTML = `
+  <img src="${e.image}" alt="" />
+  <p>${e.name}</p>
+`;
+  skillCard.className = "skillCard";
+  skillBox.append(skillCard);
+});
+
+// project append
+let project = [
+  {
+    name: "Yaudio",
+    image: "images/yaudio.png",
+    link: "https://yaudio.netlify.app/",
+    code: "https://github.com/Sahil1036/Yaudio",
+    description:
+      "YAudio provides a seamless solution for converting YouTube content into audio files for offline listening.",
+  },
+  {
+    name: "Currency",
+    image: "images/currency.png",
+    link: "https://moneycurrency.netlify.app/",
+    code: "https://github.com/Sahil1036/Currency",
+    description:
+      "This simple web application allows users to convert currencies dynamically.",
+  },
+  {
+    name: "Foodmania",
+    image: "images/food.png",
+    link: "https://sahil1036.github.io/food/",
+    code: "https://github.com/Sahil1036/food",
+  },
+  {
+    name: "Timeclock",
+    image: "images/timeclock.png",
+    link: "https://sahil1036.github.io/TimeClock/",
+    code: "https://github.com/Sahil1036/TimeClock",
+  },
+];
+let projectBox = document.querySelector(".projectBox");
+project.forEach((e) => {
+  let projectCard = document.createElement("div");
+  projectCard.innerHTML = `
+          <a href="${e.link}" target="_blank">
+            <div class="overlay"><i class="fa-solid fa-eye"></i></div>
+            <img src="${e.image}" alt="" />
+          </a>
+          <p>${e.name}</p>
+          <a href="${e.code}" target="_blank">
+            <button>Code</button>
+          </a>
+`;
+  projectCard.className = "projectCard";
+  projectBox.append(projectCard);
+});

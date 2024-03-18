@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>sahil - portfolio</title>
+    <link rel="shortcut icon" href="images/favicon1.png" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -15,7 +16,11 @@
     <script type="module" src="script.js" defer></script>
   </head>
   <body>
+
+    <!-- front view of webpage -->
     <div class="frontImage">
+
+      <!-- header of website -->
       <header>
         <div class="header">
           <div class="headerTitle">Portfolio</div>
@@ -28,9 +33,10 @@
             </ul>
           </nav>
           <div>
-            <button class="headerBtn">
-              Hire me <i class="fa-solid fa-arrow-right"></i>
-            </button>
+            <a href="mailto:sahilkumar02183@gmail.com">
+              <button class="headerBtn">
+                Hire me <i class="fa-solid fa-arrow-right"></i></button
+            ></a>
           </div>
           <div class="menu">
             <div class="menuLine"></div>
@@ -39,6 +45,8 @@
           </div>
         </div>
       </header>
+
+      <!-- navbar for mobile view -->
       <nav class="mobileNavbar">
         <ul>
           <li><a href="#home">Home</a></li>
@@ -48,6 +56,7 @@
         </ul>
       </nav>
 
+      <!-- Home section -->
       <section id="home">
         <div class="section">
           <div class="leftSection">
@@ -62,14 +71,22 @@
               fields of web development and Data Structures & Algorithms (DSA).
             </p>
             <div class="socialIcon">
-              <a href=""
+              <a href="https://www.linkedin.com/in/sahil36/" target="_blank"
                 ><i class="fa-brands fa-linkedin-in" id="linkedin"></i
               ></a>
-              <a href=""><i class="fa-brands fa-github"></i></a>
-              <a href=""><img src="images/leetcode.png" alt="" /></a>
-              <a href=""><img src="images/gfg.png" alt="" id="gfg" /></a>
+              <a href="https://github.com/Sahil1036" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://leetcode.com/Sahil_36/" target="_blank"
+                ><img src="images/leetcode.png" alt=""
+              /></a>
+              <a
+                href="https://auth.geeksforgeeks.org/user/sahil_36"
+                target="_blank"
+                ><img src="images/gfg.png" alt="" id="gfg"
+              /></a>
             </div>
-            <button class="sectionBtn">Download CV</button>
+            <a href=""> <button class="sectionBtn">Download CV</button></a>
           </div>
           <div class="rightSection">
             <img id="bgMe" src="images/bgMe.png" alt="" />
@@ -79,46 +96,61 @@
       </section>
     </div>
 
+    <!-- skill section -->
     <section id="skill" class="sectionPart">
       <h2>My Technical Skills</h2>
       <div class="skillBox">
-        <div class="skillCard">
-          <img src="images/yaudio.png" alt="" />
-          <p>yaudio</p>
-        </div>
+        <!-- it is inserted by js -->
       </div>
     </section>
+
+    <!-- project section -->
     <section id="project" class="sectionPart">
       <h2>My Latest Projects</h2>
       <div class="projectBox">
-        <div class="projectCard">
-          <a href="yaudio.netlify.app">
-            <div class="overlay"><i class="fa-solid fa-eye"></i></div>
-            <img src="images/yaudio.png" alt="" />
-          </a>
-          <p>yaudio</p>
-          <a href="">
-            <button>Code</button>
-          </a>
-        </div>
+        <!-- It is added by js -->
+      </div>
+      <div>
+        <a href="https://github.com/Sahil1036" target="_blank">
+          <button>For more</button></a
+        >
       </div>
     </section>
+
+    <!-- contact section -->
     <section id="contact" class="sectionPart">
-      <!-- <h2>Contact us</h2> -->
       <div class="contactLeft">
-        <p>Let's make something amazing together.</p>
-        <p>Start by <a href="">saying Hi</a></p>
+        <h2>Let's make something amazing together.</h2>
+        <p>
+          Start by
+          <a href="mailto:sahilkumar02183@gmail.com" class="sayHii"
+            >saying Hi</a
+          >
+        </p>
       </div>
       <div class="contactRight">
-        <div class="socialIcon">
-          <a href=""><i class="fa-brands fa-linkedin-in" id="linkedin"></i></a>
-          <a href=""><i class="fa-brands fa-github"></i></a>
-          <a href=""><img src="images/leetcode.png" alt="" /></a>
-          <a href=""><img src="images/gfg.png" alt="" id="gfg" /></a>
+        <div class="socialIcon" id="icons">
+          <a href="https://www.linkedin.com/in/sahil36/" target="_blank"
+            ><i class="fa-brands fa-linkedin-in" id="linkedin"></i>
+            <p>linkedin</p></a
+          >
+          <a href="https://github.com/Sahil1036" target="_blank"
+            ><i class="fa-brands fa-github"></i>
+            <p>github</p></a
+          >
+          <a href="https://leetcode.com/Sahil_36/" target="_blank"
+            ><img src="images/leetcode.png" alt="" />
+            <p>leetcode</p></a
+          >
+          <a href="https://auth.geeksforgeeks.org/user/sahil_36" target="_blank"
+            ><img src="images/gfg.png" alt="" id="gfg" />
+            <p>GeekforGeeks</p></
+          >
         </div>
       </div>
     </section>
 
+    <!-- Footer of website -->
     <footer>
       <p>Created with 💕 by Sahil</p>
     </footer>
