@@ -84,7 +84,8 @@ header {
     width: 420px;
     height: 200px;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.4);
     box-shadow: var(--color-white) 0 0 8px;
     padding: 20px 0px;
     font-size: var(--medium-size);
@@ -474,7 +475,7 @@ footer {
         justify-content: center;
     }
 
-    :root{
+    :root {
         --color-purple: hsl(256, 36%, 55%);
         --color-pink: hsl(300, 76%, 77%);
     }

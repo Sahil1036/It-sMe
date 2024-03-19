@@ -47,15 +47,16 @@ let skill = [
   },
   {
     name: "HTML",
-    image: "https://sk-mousin-ali.github.io/Portfolio/img/logo/html.svg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/1024px-HTML5_Badge.svg.png",
   },
   {
     name: "CSS",
-    image: "https://sk-mousin-ali.github.io/Portfolio/img/logo/css.svg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg",
   },
   {
     name: "Javascript",
-    image: "https://sk-mousin-ali.github.io/Portfolio/img/logo/javascript.svg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
   },
   {
     name: "Tailwindcss",
