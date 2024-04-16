@@ -78,6 +78,11 @@ let skill = [
     image:
       "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg",
   },
+  {
+    name: "ReactJs",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/768px-React-icon.svg.png",
+  },
 ];
 let skillBox = document.querySelector(".skillBox");
 skill.forEach((e) => {
@@ -119,6 +124,12 @@ let project = [
     image: "images/timeclock.png",
     link: "https://sahil1036.github.io/TimeClock/",
     code: "https://github.com/Sahil1036/TimeClock",
+  },
+  {
+    name: "Letsplay",
+    image: "images/letsplay.png",
+    link: "https://letsplaymus.netlify.app/",
+    code: "https://github.com/Sahil1036/Letsplay",
   },
 ];
 let projectBox = document.querySelector(".projectBox");
