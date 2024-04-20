@@ -1,3 +1,4 @@
+AOS.init();
 // Navbar code
 let navbar = document.querySelector("header");
 window.onscroll = function () {
@@ -87,6 +88,7 @@ let skill = [
 let skillBox = document.querySelector(".skillBox");
 skill.forEach((e) => {
   let skillCard = document.createElement("div");
+  skillCard.setAttribute("data-aos","zoom-out-up");
   skillCard.innerHTML = `
   <img src="${e.image}" alt="" />
   <p>${e.name}</p>
@@ -135,6 +137,7 @@ let project = [
 let projectBox = document.querySelector(".projectBox");
 project.forEach((e) => {
   let projectCard = document.createElement("div");
+  projectCard.setAttribute("data-aos","zoom-out-down");
   projectCard.innerHTML = `
           <a href="${e.link}" target="_blank">
             <div class="overlay"><i class="fa-solid fa-eye"></i></div>
